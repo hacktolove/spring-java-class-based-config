@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="computer" class="com.example.Computer" autowire="byType" >
+        <property name="cores" value="8" />
+    </bean>
+
+    <bean  class="com.example.Compiler">
+    </bean>
+
+
+</beans>
