@@ -11,10 +11,17 @@ public class App {
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Computer computer = context.getBean(Computer.class);
+        Gamingable computer = context.getBean(Gamingable.class);
 
+        computer.compile();
         computer.playGame();
-        computer.getCompiler().compile();
+
+        System.out.println("Your PC has " + computer.getCores() + " cores");
+
+//        Computer computer = context.getBean("computer" , Computer.class);
+
+//        computer.playGame();
+//        computer.getCompiler().compile();
 
     }
 }
